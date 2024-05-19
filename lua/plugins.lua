@@ -20,18 +20,9 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
 
-    { -- ChatGPT
-        'jackMort/ChatGPT.nvim',
-        config = function()
-            require('chatgpt').setup()
-        end,
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "folke/trouble.nvim",
-            "nvim-telescope/telescope.nvim",
-        }
-    },
+    -- ???
+    "nvim-lua/plenary.nvim",
+
 
     "nvim-telescope/telescope.nvim", -- Fuzzy Finder
 
@@ -45,15 +36,6 @@ require("lazy").setup({
         end
     },
 
-    {   -- Git
-        "NeogitOrg/neogit",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "sindrets/diffview.nvim",
-            "nvim-telescope/telescope.nvim",
-        },
-        config = true
-    },
-
+    "github/copilot.vim", -- Github Copilot
 })
 
