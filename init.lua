@@ -1,7 +1,7 @@
 require('options')
 require('keymaps')
 require('plugins')
-require('colorscheme')
+-- require('colorscheme')
 require('lsp')
 
 vim.g.mapleader = ' '
@@ -36,6 +36,7 @@ vim.api.nvim_set_keymap('n', '<Leader>pf', ':Telescope find_files<CR>', { norema
 
 -- Apps (x)
 vim.api.nvim_set_keymap('n', '<Leader>xg', ':ChatGPT<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>xd', ':Explore<CR>', { noremap = true, silent = true })
 
 -- Config (h)
 vim.api.nvim_set_keymap('n', '<Leader>hr', ':source $MYVIMRC<CR>', { noremap = true, silent = true })
@@ -51,6 +52,12 @@ vim.api.nvim_set_keymap('n', '<Leader>pg', ':Telescope live_grep<CR>', { noremap
 -- Git (g)
 vim.api.nvim_set_keymap('n', '<Leader>gg', ':Neogit<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>gl', ':Neogit log<CR>', { noremap = true, silent = true })
+
+-- Copilot (c)
+vim.api.nvim_set_keymap('i', '<C-CR>', 'copilot#Accept("<CR>")', { silent = true, expr = true, script = true })
+--vim.api.nvim_set_keymap('n', '<Leader>Cc', ':Copilot enable<CR>', { silent = true, expr = true, script = true })
+--vim.api.nvim_set_keymap('n', '<Leader>CC', ':Copilot disable<CR>', { silent = true, expr = true, script = true })
+
 
 
 
